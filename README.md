@@ -2,6 +2,20 @@
 
 Simple, elegant React UI scaffold for the **Commercial Energy Consumption Analytics & Anomaly Alerts** system.
 
+## Backend API base URL (config)
+
+This app calls the FastAPI backend using a configurable base URL:
+
+- Env var: `VITE_API_BASE_URL`
+- Default: `http://localhost:8000`
+
+Example:
+
+```bash
+export VITE_API_BASE_URL="http://localhost:8000"
+npm run dev
+```
+
 ## What’s included
 
 - Role landing page
@@ -28,6 +42,11 @@ npm run dev
 ```
 
 Then open `http://localhost:5173`.
+
+### Run with backend locally
+
+1) Start backend (default localhost:8000)
+2) Start this app (localhost:5173) and ensure the backend allows CORS for `http://localhost:5173`.
 
 ## Routes
 
